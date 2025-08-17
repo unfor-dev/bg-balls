@@ -1,0 +1,112 @@
+body, html, #app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #1a1a1a;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,0.5) 200%);
+}
+
+#app {
+  position: relative;
+  height: 100%;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 350px;
+  z-index: 2;
+  gap: 20px;
+}
+
+.text-wrapper{
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  padding: 30px 40px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.text-wrapper:hover {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+/* HEADINGS */
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  user-select: none;
+  letter-spacing: 3px;
+}
+
+h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 90px;
+  font-weight: 800;
+  background: linear-gradient(360deg, #4c2f8b, #ff1379);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 25px rgba(0,0,0,0.15);
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(137, 61, 141);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+/* CANVAS */
+#webgl-canvas {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* BUTTONS WRAPPER */
+.buttons {
+  position: fixed;
+  width: 100%;
+  bottom: 80px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* BUTTON STYLE */
+button {
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
